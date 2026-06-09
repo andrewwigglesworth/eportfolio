@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Andrew Wigglesworth</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Projects</h1>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<main>
+
+    <div class="card">
+        <h2>Active Directory Lab</h2>
+
+        <p>
+            Built a Windows Server environment with multiple
+            domain-joined workstations to practice administration
+            and security concepts.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>Raspberry Pi Cluster</h2>
+
+        <p>
+            Developed a home server environment using Raspberry Pi devices
+            for experimentation with services, automation, and distributed systems.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>TryHackMe Write-Ups</h2>
+
+        <p>
+            Documented lessons learned from practical cybersecurity exercises
+            and challenge environments.
+        </p>
+    </div>
+
+</main>
+
+<footer>
+    <p>© 2026 Andrew Wigglesworth</p>
+</footer>
+
+</body>
+</html>
