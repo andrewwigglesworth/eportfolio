@@ -1,29 +1,185 @@
-<!DOCTYPE html><html><head><title>About Me</title><link rel="stylesheet" href="style.css"></head><body><header><h1>Who is Andrew Wigglesworth</h1>
-<nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About Me</a>
-    <a href="projects.html">Projects</a>
-    <a href="lab-notes.html">Lab Notes</a>
-    <a href="contact.html">Contact</a>
-</nav>
-</header><main><div class="card">
-    <p>
-    My name is Andrew Wigglesworth, a cybersecurity professional, community leader, and lifelong learner passionate about helping people understand technology and security.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me</title>
 
-    My journey into cybersecurity didn’t start in a classroom or at a help desk. It started with video games.
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f5f7fa;
+      color: #222;
+      line-height: 1.6;
+    }
 
-    Growing up, I was always intrigued about finding easter eggs, discovering glitches, making mods, and pushing the limits of getting the games to break. In addition to that I was always very technically savy so I enjoyed messing with different computers and devices.
+    .about-page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 60px 24px;
+    }
 
-    That curiosity eventually led me to pursue a Bachelor’s and Master’s degree in Cybersecurity and begin a career in information technology. Today, I work as a Systems Administrator while continuing to develop my skills in penetration testing, security operations, cloud technologies, and cybersecurity research.
+    .page-title {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 50px;
+      color: #111;
+    }
 
-    Outside of my professional work, I believe strongly in giving back to the cybersecurity community. I help support cybersecurity education, community outreach, mentoring, and professional development through organizations such as Blacks In Cybersecurity, where I hold the position of Global Ambassador Lead.
+    .about-section {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      margin-bottom: 70px;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    }
 
-    I am constantly building new projects, expanding my homelab environment, participating in hands-on cybersecurity training, and documenting my learning journey through technical write-ups and portfolio projects.
+    .about-section.reverse {
+      flex-direction: row-reverse;
+    }
 
-    My long-term goal is to transition into a dedicated cybersecurity role where I can combine technical expertise, leadership, and community impact to help organizations defend against evolving threats while helping the next generation of cybersecurity professionals enter the field.
+    .image-placeholder {
+      flex: 1;
+      min-height: 280px;
+      background-color: #d9e2ec;
+      border: 2px dashed #8fa3b8;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #52667a;
+      font-size: 1.1rem;
+      text-align: center;
+      padding: 20px;
+    }
 
-    When I’m not working on technology, you’ll usually find me playing basketball, traveling, attending cybersecurity conferences, volunteering in the community, or watching anime!    
-            </p>
-        </div>
-    </main>
-    <footer>© 2026 Andrew Wigglesworth</footer></body></html>
+    .section-content {
+      flex: 1;
+    }
+
+    .section-content h2 {
+      font-size: 1.8rem;
+      margin-bottom: 16px;
+      color: #0f172a;
+    }
+
+    .section-content p {
+      font-size: 1rem;
+      color: #444;
+      margin: 0;
+    }
+
+    @media (max-width: 768px) {
+      .about-section,
+      .about-section.reverse {
+        flex-direction: column;
+      }
+
+      .page-title {
+        font-size: 2rem;
+      }
+
+      .image-placeholder {
+        width: 100%;
+        min-height: 220px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="about-page">
+    <h1 class="page-title">About Me</h1>
+
+    <!-- Section 1: Basketball -->
+    <section class="about-section">
+      <div class="image-placeholder">
+        Basketball Image Placeholder
+      </div>
+
+      <div class="section-content">
+        <h2>Love for Basketball</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae
+          justo at neque facilisis posuere. Sed euismod, magna non luctus
+          tincidunt, ligula erat facilisis velit, vitae consequat lorem ipsum at
+          lorem.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 2: Anime -->
+    <section class="about-section reverse">
+      <div class="image-placeholder">
+        Anime Image Placeholder
+      </div>
+
+      <div class="section-content">
+        <h2>Love for Anime</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae
+          justo at neque facilisis posuere. Sed euismod, magna non luctus
+          tincidunt, ligula erat facilisis velit, vitae consequat lorem ipsum at
+          lorem.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 3: Video Games -->
+    <section class="about-section">
+      <div class="image-placeholder">
+        Video Games Image Placeholder
+      </div>
+
+      <div class="section-content">
+        <h2>Video Games</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae
+          justo at neque facilisis posuere. Sed euismod, magna non luctus
+          tincidunt, ligula erat facilisis velit, vitae consequat lorem ipsum at
+          lorem.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 4: Blacks In Cybersecurity -->
+    <section class="about-section reverse">
+      <div class="image-placeholder">
+        Blacks In Cybersecurity Image Placeholder
+      </div>
+
+      <div class="section-content">
+        <h2>Blacks In Cybersecurity</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae
+          justo at neque facilisis posuere. Sed euismod, magna non luctus
+          tincidunt, ligula erat facilisis velit, vitae consequat lorem ipsum at
+          lorem.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 5: Kappa Alpha Psi -->
+    <section class="about-section">
+      <div class="image-placeholder">
+        Kappa Alpha Psi Image Placeholder
+      </div>
+
+      <div class="section-content">
+        <h2>Kappa Alpha Psi Fraternity, Incorporated</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae
+          justo at neque facilisis posuere. Sed euismod, magna non luctus
+          tincidunt, ligula erat facilisis velit, vitae consequat lorem ipsum at
+          lorem.
+        </p>
+      </div>
+    </section>
+  </main>
+<footer>© 2026 Andrew Wigglesworth</footer>
+</body>
+</html>
