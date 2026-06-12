@@ -90,8 +90,8 @@
     <footer>
         <p>&copy; 2026 Andrew Wigglesworth</p>
     </footer>
- <script>
-  const aboutSections = document.querySelectorAll(".about-section");
+<script>
+  const revealSections = document.querySelectorAll(".scroll-reveal");
 
   if ("IntersectionObserver" in window) {
     const observer = new IntersectionObserver((entries) => {
@@ -115,13 +115,13 @@
       threshold: 0.22
     });
 
-    aboutSections.forEach((section, index) => {
+    revealSections.forEach((section, index) => {
       section.dataset.revealIndex = index;
       section.classList.add("reveal-ready");
       observer.observe(section);
     });
   } else {
-    aboutSections.forEach((section) => {
+    revealSections.forEach((section) => {
       section.classList.add("is-visible");
     });
   }
