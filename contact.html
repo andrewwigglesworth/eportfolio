@@ -30,5 +30,25 @@
     </div>
 </main>
     <footer>© 2026 Andrew Wigglesworth</footer>
+        <script>
+  const pageLinks = document.querySelectorAll("a[href$='.html']");
+
+  pageLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      const url = link.getAttribute("href");
+
+      if (!url || link.target === "_blank") {
+        return;
+      }
+
+      event.preventDefault();
+      document.body.classList.add("page-exit");
+
+      setTimeout(() => {
+        window.location.href = url;
+      }, 250);
+    });
+  });
+</script>
 </body>
 </html>
