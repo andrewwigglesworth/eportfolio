@@ -319,5 +319,28 @@ nav a:hover::after {
   <footer>
     <p>© 2026 Andrew Wigglesworth. All rights reserved.</p>
   </footer>
+  <script>
+  const aboutSections = document.querySelectorAll(".about-section");
+
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          entry.target.style.transitionDelay = "";
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.22 });
+
+    aboutSections.forEach((section, index) => {
+      section.classList.add("reveal-ready");
+      section.style.transitionDelay = `${Math.min(index * 80, 240)}ms`;
+      observer.observe(section);
+    });
+  } else {
+    aboutSections.forEach((section) => section.classList.add("is-visible"));
+  }
+</script>
 </body>
 </html>
