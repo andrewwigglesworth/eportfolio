@@ -227,4 +227,78 @@ nav a:hover::after {
         transition-duration: 0.01ms !important;
     }
 }
+    /* ===== Page Transition Effects ===== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    animation: page-fade-in 0.55s ease-out both;
+}
+
+header {
+    animation: header-slide-in 0.55s ease-out both;
+}
+
+main > * {
+    animation: content-rise-in 0.65s ease-out both;
+}
+
+main > *:nth-child(2) {
+    animation-delay: 0.08s;
+}
+
+main > *:nth-child(3) {
+    animation-delay: 0.16s;
+}
+
+@keyframes page-fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes header-slide-in {
+    from {
+        opacity: 0;
+        transform: translateY(-12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes content-rise-in {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
 }
