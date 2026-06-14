@@ -1,58 +1,64 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Lab Notes</title><link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <header>
-        <h1>Lab Notes</h1>
-<nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About Me</a>
-    <a href="projects.html">Projects</a>
-    <a href="lab-notes.html">Lab Notes</a>
-    <a href="contact.html">Contact</a>
-</nav>
-</header>
-    <main>
-      <div class="card"><h2>Technical Write-Ups</h2><p>This section documents how I built projects, lessons learned, troubleshooting steps, and technical reflections.</p></div>
-    </main>
-    <footer>© 2026 Andrew Wigglesworth</footer>
-<script>
-  const revealSections = document.querySelectorAll(".scroll-reveal");
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab Notes | Andrew Wigglesworth</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="index.html" aria-label="Home"><span class="brand-mark">AW</span><span>Andrew Wigglesworth</span></a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span></button>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="projects.html">Projects</a>
+        <a href="lab-notes.html">Lab Notes</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-  if ("IntersectionObserver" in window) {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        const section = entry.target;
-        const sectionIndex = Number(section.dataset.revealIndex);
+  <main class="page-shell">
+    <section class="hero">
+      <div class="hero-grid">
+        <div class="hero-copy scroll-reveal">
+          <p class="eyebrow">Technical write-ups</p>
+          <h1 class="display-title">Lab <span>Notes</span></h1>
+          <p class="lead">This section documents how I built projects, lessons learned, troubleshooting steps, and technical reflections.</p>
+        </div>
+        <div class="hero-media scroll-reveal">
+          <div class="placeholder-image float-soft" data-label="Lab notes hero image"></div>
+          <div class="placeholder-image" data-label="Terminal screenshot placeholder"></div>
+          <div class="caption-card"><strong>Documented Growth</strong><span>Build notes, fixes, and reflections.</span></div>
+        </div>
+      </div>
+    </section>
 
-        if (entry.isIntersecting) {
-          section.style.transitionDelay = `${Math.min(sectionIndex * 80, 240)}ms`;
-          section.classList.add("is-visible");
+    <section class="section">
+      <div class="section-inner">
+        <div class="split-heading scroll-reveal">
+          <h2>Technical<br><span class="accent">Write-Ups</span></h2>
+          <p>This space can hold walkthrough summaries, troubleshooting notes, diagrams, defensive takeaways, and lessons learned from each lab.</p>
+        </div>
+        <div class="card-grid">
+          <article class="mini-card scroll-reveal"><h3>Build Notes</h3><p>Document how each environment was planned, installed, configured, and improved.</p></article>
+          <article class="mini-card scroll-reveal"><h3>Lessons Learned</h3><p>Capture what worked, what failed, and what you would do differently next time.</p></article>
+          <article class="mini-card scroll-reveal"><h3>Troubleshooting</h3><p>Track errors, fixes, commands, screenshots, and technical reflections.</p></article>
+        </div>
+      </div>
+    </section>
+  </main>
 
-          setTimeout(() => {
-            section.style.transitionDelay = "";
-          }, 700);
-        } else {
-          section.style.transitionDelay = "0ms";
-          section.classList.remove("is-visible");
-        }
-      });
-    }, {
-      threshold: 0.22
-    });
-
-    revealSections.forEach((section, index) => {
-      section.dataset.revealIndex = index;
-      section.classList.add("reveal-ready");
-      observer.observe(section);
-    });
-  } else {
-    revealSections.forEach((section) => {
-      section.classList.add("is-visible");
-    });
-  }
-</script>
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div><h2>Andrew Wigglesworth</h2><p>Technical write-ups, troubleshooting notes, and lab reflections.</p></div>
+      <div><h3>Pages</h3><div class="footer-links"><a href="index.html">Home</a><a href="projects.html">Projects</a><a href="contact.html">Contact</a></div></div>
+      <div><h3>Copyright</h3><p>&copy; 2026 Andrew Wigglesworth</p></div>
+    </div>
+  </footer>
 </body>
 </html>
