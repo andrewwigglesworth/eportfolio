@@ -1,130 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Andrew Wigglesworth | Cybersecurity Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Andrew Wigglesworth | Cybersecurity Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
-
 <body>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="index.html" aria-label="Home">
+        <span class="brand-mark">AW</span>
+        <span>Andrew Wigglesworth</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span></button>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="projects.html">Projects</a>
+        <a href="lab-notes.html">Lab Notes</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-    <header>
-        <h1>Andrew Wigglesworth</h1>
+  <main class="page-shell">
+    <section class="hero">
+      <div class="hero-grid">
+        <div class="hero-copy scroll-reveal">
+          <p class="eyebrow">Systems Administrator | Cybersecurity Professional</p>
+          <h1 class="display-title">Andrew <span>Wigglesworth</span></h1>
+          <p class="lead">Welcome to my personal cybersecurity portfolio. This website serves as a central location to showcase my professional experience, technical projects, home lab initiatives, and ongoing growth within the cybersecurity field.</p>
+          <p class="lead">I am passionate about building practical skills through hands-on learning, documenting my journey, and helping others break into technology and cybersecurity.</p>
+          <div class="hero-actions">
+            <a class="btn" href="projects.html">View Projects</a>
+            <a class="btn ghost" href="contact.html">Connect With Me</a>
+          </div>
+        </div>
+        <div class="hero-media scroll-reveal">
+          <div class="placeholder-image float-soft" data-label="Professional photo placeholder"></div>
+          <div class="placeholder-image" data-label="Cyber lab image placeholder"></div>
+          <div class="caption-card">
+            <strong>Blacks In Cybersecurity Global Ambassador Lead</strong>
+            <span>Leadership, mentorship, and community growth.</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <p>
-            Systems Administrator | Cybersecurity Professional |
-            Blacks In Cybersecurity Global Ambassador Lead 
-        </p>
+    <section class="section">
+      <div class="section-inner">
+        <div class="split-heading scroll-reveal">
+          <h2>Current<br><span class="accent">Focus</span></h2>
+          <p>These are the areas I am actively building, documenting, and improving as I continue growing in system administration and cybersecurity.</p>
+        </div>
+        <div class="card-grid">
+          <article class="mini-card scroll-reveal"><h3>Home Labs</h3><p>Building and documenting cybersecurity home labs.</p></article>
+          <article class="mini-card scroll-reveal"><h3>Cloud Security</h3><p>Expanding knowledge of Azure security services and cloud technologies.</p></article>
+          <article class="mini-card scroll-reveal"><h3>Python Automation</h3><p>Developing Python automation skills for system administration and security tasks.</p></article>
+          <article class="mini-card scroll-reveal"><h3>Leadership</h3><p>Contributing to the cybersecurity community through leadership and mentorship initiatives.</p></article>
+          <article class="mini-card scroll-reveal"><h3>Write-Ups</h3><p>Creating technical write-ups to share lessons learned and demonstrate continuous growth.</p></article>
+          <article class="mini-card scroll-reveal"><h3>Portfolio Growth</h3><p>Using this site to organize projects, lab notes, and professional development.</p></article>
+        </div>
+      </div>
+    </section>
 
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About Me</a>
-            <a href="projects.html">Projects</a>
-            <a href="lab-notes.html">Lab Notes</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
+    <section class="section band">
+      <div class="section-inner cta-band">
+        <h2 class="scroll-reveal">Explore The<br><span class="accent">Portfolio</span></h2>
+        <div class="mini-card scroll-reveal">
+          <p>Use the navigation above to learn more about my background, explore projects I have completed, read technical write-ups from my lab work, and connect with me professionally.</p>
+          <a class="btn" href="about.html">Start With About Me</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    <main>
-
-        <section class="card">
-            <h2>Welcome</h2>
-
-            <p>
-                Welcome to my personal cybersecurity portfolio.
-                This website serves as a central location to showcase
-                my professional experience, technical projects,
-                home lab initiatives, and ongoing growth within
-                the cybersecurity field.
-            </p>
-
-            <p>
-                I am passionate about building practical skills through
-                hands-on learning, documenting my journey, and helping
-                others break into technology and cybersecurity.
-            </p>
-        </section>
-
-        <section class="card">
-            <h2>Current Focus</h2>
-
-            <ul>
-                <li>Building and documenting cybersecurity home labs</li>
-
-                <li>
-                    Expanding knowledge of Azure security services
-                    and cloud technologies
-                </li>
-
-                <li>
-                    Developing Python automation skills for system
-                    administration and security tasks
-                </li>
-
-                <li>
-                    Contributing to the cybersecurity community
-                    through leadership and mentorship initiatives
-                </li>
-
-                <li>
-                    Creating technical write-ups to share lessons
-                    learned and demonstrate continuous growth
-                </li>
-            </ul>
-        </section>
-
-        <section class="card">
-            <h2>Explore the Portfolio</h2>
-
-            <p>
-                Use the navigation above to learn more about my
-                background, explore projects I have completed,
-                read technical write-ups from my lab work, and
-                connect with me professionally.
-            </p>
-        </section>
-
-    </main>
-
-    <footer>
-        <p>&copy; 2026 Andrew Wigglesworth</p>
-    </footer>
-<script>
-  const revealSections = document.querySelectorAll(".scroll-reveal");
-
-  if ("IntersectionObserver" in window) {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        const section = entry.target;
-        const sectionIndex = Number(section.dataset.revealIndex);
-
-        if (entry.isIntersecting) {
-          section.style.transitionDelay = `${Math.min(sectionIndex * 80, 240)}ms`;
-          section.classList.add("is-visible");
-
-          setTimeout(() => {
-            section.style.transitionDelay = "";
-          }, 700);
-        } else {
-          section.style.transitionDelay = "0ms";
-          section.classList.remove("is-visible");
-        }
-      });
-    }, {
-      threshold: 0.22
-    });
-
-    revealSections.forEach((section, index) => {
-      section.dataset.revealIndex = index;
-      section.classList.add("reveal-ready");
-      observer.observe(section);
-    });
-  } else {
-    revealSections.forEach((section) => {
-      section.classList.add("is-visible");
-    });
-  }
-</script>
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div><h2>Andrew Wigglesworth</h2><p>Systems Administrator | Cybersecurity Professional | Blacks In Cybersecurity Global Ambassador Lead</p></div>
+      <div><h3>Pages</h3><div class="footer-links"><a href="about.html">About Me</a><a href="projects.html">Projects</a><a href="lab-notes.html">Lab Notes</a></div></div>
+      <div><h3>Copyright</h3><p>&copy; 2026 Andrew Wigglesworth</p></div>
+    </div>
+  </footer>
 </body>
 </html>
